@@ -45,7 +45,7 @@ namespace Twitter_Followings_Transfert
 
         private void button2_Click(object sender, EventArgs e)
         {
-            requestToken = OAuthUtility.GetRequestToken("CpcWcxvTAXoiM7ibIg", "Fellor49EGKkeCWiqvw9CPHktl1uiRjT2DiouBavA", "oob").Token;
+            requestToken = OAuthUtility.GetRequestToken("XXXXX", "XXXXX", "oob").Token;
             Process.Start(OAuthUtility.BuildAuthorizationUri(requestToken).AbsoluteUri);
         }
 
@@ -60,7 +60,7 @@ namespace Twitter_Followings_Transfert
             OAuthTokenResponse accessToken;
             try
             {
-                accessToken = OAuthUtility.GetAccessToken("CpcWcxvTAXoiM7ibIg", "Fellor49EGKkeCWiqvw9CPHktl1uiRjT2DiouBavA", requestToken, pin);
+                accessToken = OAuthUtility.GetAccessToken("XXXXX", "XXXXX", requestToken, pin);
             }
             catch (Exception ex)
             {
@@ -71,8 +71,8 @@ namespace Twitter_Followings_Transfert
             tokens = new OAuthTokens();
             tokens.AccessToken = accessToken.Token;
             tokens.AccessTokenSecret = accessToken.TokenSecret;
-            tokens.ConsumerKey = "CpcWcxvTAXoiM7ibIg";
-            tokens.ConsumerSecret = "Fellor49EGKkeCWiqvw9CPHktl1uiRjT2DiouBavA";
+            tokens.ConsumerKey = "XXXXX";
+            tokens.ConsumerSecret = "XXXXX";
             ScreenName = accessToken.ScreenName;
             UserID = accessToken.UserId;
 
